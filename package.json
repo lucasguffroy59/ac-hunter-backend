@@ -1,0 +1,30 @@
+{
+  "name": "ac-hunter-backend",
+  "version": "1.0.0",
+  "description": "AC hunter backend",
+  "main": "index.js",
+  "dependencies": {
+    "aws-sdk": "^2.691.0",
+    "uuid": "^8.1.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lucasguffroy59/ac-hunter-backend.git"
+  },
+  "keywords": [
+    "animal",
+    "crossing",
+    "backend",
+    "serverless"
+  ],
+  "author": "Lucas Guffroy",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lucasguffroy59/ac-hunter-backend/issues"
+  },
+  "homepage": "https://github.com/lucasguffroy59/ac-hunter-backend#readme"
+}
