@@ -35,12 +35,15 @@ functions:
           path: fish
           method: get
           cors: true
-  # getFishById:
-  #   handler: api/fish/handler.getFishById
-  #   events:
-  #     - http:
-  #         path: fish/{id}
-  #         method: get
+  getFishById:
+    handler: api/fish/handler.getFishById
+    memorySize: 128
+    description: Get a fish from the database by specifying it's id
+    events:
+      - http:
+          path: fish/{id}
+          method: get
+          cors: true
 
 resources:
   Resources:

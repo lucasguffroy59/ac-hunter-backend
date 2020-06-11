@@ -13,3 +13,7 @@ exports.fish = (fullName, size, rarity, price, findLocation, timeOfDay, timeOfYe
   if (notValid.length) return { isValid: false, notValid }
   return { isValid: true }
 }
+
+exports.fishId = (id) => {
+  if (typeof id === 'string' && id.split('').length === 36 && id.charAt(8) === '-' && id.charAt(13) === '-' && id.charAt(18) === '-' && id.charAt(23) === '-') return true
+}

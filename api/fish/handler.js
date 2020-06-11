@@ -58,6 +58,24 @@ module.exports.getAllFish = async (event, context) => {
     return returnRawObj(200, getAllFishAction.Items)
   } catch (e) {
     console.log(e)
-    return returnObj(500, 'Error while trying to get fish to DB')
+    return returnObj(500, 'Error while trying to get fish from DB')
+  }
+}
+
+module.exports.getFishById = async (event, context) => {
+  
+  const id = event.pathParameters.id
+  if (!validateParams.fishId(id)) return returnObj(400, 'Id is wrong format')
+
+  console.log('Entered get fish by id')
+  try {
+    const getFishAction = await getFromDb.fishById(id)
+
+    console.log('getFishAction', getFishAction)
+
+    return returnRawObj(200, getFishAction.Item)
+  } catch (e) {
+    console.log(e)
+    return returnObj(500, 'Error while trying to get fish from DB')
   }
 }
